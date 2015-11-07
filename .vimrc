@@ -1,46 +1,71 @@
+"Neobundle
+if has('vim_starting')
+  if &compatible
+    set nocompatible
+   endif
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle'))
+
 "---------------------------
 " Start Neobundle Settings.
 "---------------------------
-"bundleで管理するディレクトリを指定
-set runtimepath+=~/.vim/bundle/neobundle.vim/
- 
-"Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-  
+
 "neobundle自体の取得
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"プラグインのインストール
+"コード補完
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'marcus/rsense'
+NeoBundle 'supermomonga/neocomplete-rsense.vim'
+
+"ファイル構造可視化
 NeoBundle 'scrooloose/nerdtree'
+
+"ブロック終わりの補完
 NeoBundle 'Townk/vim-autoclose'
 
-"プラグイン コード補完
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle "osyo-manga/vim-monster" 
-
 "静的解析
-NeoBundle 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic.git'
 
-"ctags設定
+" ドキュメント参照
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'yuku-t/vim-ref-ri'
+
+" メソッド定義元へのジャンプ
 NeoBundle 'szw/vim-tags'
-let g:vim_tags_project_tags_command = "/usr/local/bin/ctags -R {OPTIONS} {DIRECTORY} 2>/dev/null"
-let g:vim_tags_gems_tags_command = "/usr/local/bin/ctags -R {OPTIONS} `bundle show --paths` 2>/dev/null"
+
+" 自動で閉じる
+NeoBundle 'tpope/vim-endwise'
 
 call neobundle#end()
 
-" Required:
-filetype plugin indent on
-
 NeoBundleCheck
 
-"-------------------------
-" End Neobundle Settings.
-"-------------------------
+"------------------------
+" End NeoBundle Settings.
+"------------------------
 
-" Use neocomplete.vim
-let g:neocomplete#sources#omni#input_patterns = {
-\   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
-\}
+" -------------------------------
+" Rsense
+" -------------------------------
+let g:rsenseHome = '/usr/local/lib/rsense-0.3'
+let g:rsenseUseOmniFunc = 1
+
+" --------------------------------
+" neocomplete.vim
+" --------------------------------
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby ='[^.*\t]\.\w*\|\h\w*::'
+
+" Required:
+filetype plugin indent on
 
 runtime! debian.vim
 
@@ -51,9 +76,9 @@ endif
 set number
 set title
 set ambiwidth=double
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set smartindent
 set list
 set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
