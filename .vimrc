@@ -36,6 +36,9 @@ NeoBundle 'yuku-t/vim-ref-ri'
 "メソッド定義元へのジャンプ
 NeoBundle 'szw/vim-tags'
 
+"ステータスライン追加
+NeoBundle 'itchyny/lightline.vim'
+
 "自動で閉じる
 NeoBundle 'tpope/vim-endwise'
 
@@ -89,6 +92,7 @@ set virtualedit=block
 set whichwrap=b,s,[,],<,>
 set backspace=indent,eol,start
 set wildmenu
+set laststatus=2
 autocmd ColorScheme * highlight LineNr ctermfg=228 guifg=#008800
 colorscheme hybrid
 
