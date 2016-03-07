@@ -29,14 +29,14 @@ NeoBundle 'Townk/vim-autoclose'
 "静的解析
 NeoBundle 'scrooloose/syntastic.git'
 
-" ドキュメント参照
+"ドキュメント参照
 NeoBundle 'thinca/vim-ref'
 NeoBundle 'yuku-t/vim-ref-ri'
 
-" メソッド定義元へのジャンプ
+"メソッド定義元へのジャンプ
 NeoBundle 'szw/vim-tags'
 
-" 自動で閉じる
+"自動で閉じる
 NeoBundle 'tpope/vim-endwise'
 
 call neobundle#end()
@@ -92,7 +92,7 @@ set wildmenu
 autocmd ColorScheme * highlight LineNr ctermfg=228 guifg=#008800
 colorscheme hybrid
 
-" Source a global configuration file if available
+"Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
