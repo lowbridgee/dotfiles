@@ -39,6 +39,12 @@ NeoBundle 'szw/vim-tags'
 "ステータスライン追加
 NeoBundle 'itchyny/lightline.vim'
 
+"Markdownプレビュー表示
+NeoBundle 'kannokanno/previm'
+au BufRead,BufNewFile *.md set filetype=markdown
+let g:previm_open_cmd = 'open -a Google\ Chrome'
+let g:previm_enable_realtime = 1
+
 "自動で閉じる
 NeoBundle 'tpope/vim-endwise'
 
