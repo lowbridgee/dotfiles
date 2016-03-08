@@ -51,6 +51,9 @@ NeoBundle 'open-browser.vim'
 "自動で閉じる
 NeoBundle 'tpope/vim-endwise'
 
+"Git
+NeoBundle 'tpope/vim-fugitive'
+
 "フロントエンド実装
 "html css整形
 NeoBundle 'hail2u/vim-css3-syntax'
