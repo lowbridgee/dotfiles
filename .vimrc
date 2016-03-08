@@ -45,8 +45,16 @@ au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_open_cmd = 'open -a Google\ Chrome'
 let g:previm_enable_realtime = 1
 
+"ブラウザを開く
+NeoBundle 'open-browser.vim' 
+
 "自動で閉じる
 NeoBundle 'tpope/vim-endwise'
+
+"フロントエンド実装
+"html css整形
+NeoBundle 'hail2u/vim-css3-syntax'
+NeoBundle 'taichouchou2/html5.vim'
 
 call neobundle#end()
 
