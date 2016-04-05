@@ -54,11 +54,6 @@ NeoBundle 'tpope/vim-endwise'
 "Git
 NeoBundle 'tpope/vim-fugitive'
 
-"フロントエンド実装
-"html css整形
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'taichouchou2/html5.vim'
-
 call neobundle#end()
 
 NeoBundleCheck

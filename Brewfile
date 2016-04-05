@@ -34,7 +34,6 @@ cask install vagrant
 cask install kobito
 cask install alfred
 cask install dropbox
-cask install evernote
 cask install skitch
 cask install github
 cask install sequel-pro
