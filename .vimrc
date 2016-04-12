@@ -2,8 +2,13 @@
 if has('vim_starting')
   if &compatible
     set nocompatible
-   endif
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
+    " neobundle をインストールしていない場合は自動インストール
+    if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
+      echo "install neobundle..."
+      :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
+    endif
+  endif
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 call neobundle#begin(expand('~/.vim/bundle'))
