@@ -136,3 +136,7 @@ vcs_info_wrapper() {
         fi
 }
 RPROMPT=$'$(vcs_info_wrapper)'
+
+# alias
+alias ll='ls -l'
+alias tsubame='ssh 16M30622@login-t2.g.gsic.titech.ac.jp'
