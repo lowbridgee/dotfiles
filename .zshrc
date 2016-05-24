@@ -16,6 +16,8 @@ setopt prompt_subst      # プロンプト定義内で変数置換やコマン�
 setopt notify            # バックグラウンドジョブの状態変化を即時報告する
 #setopt equals            # =commandを`which command`と同じ処理にする
 
+export XDG_CONFIG_HOME="$HOME/dotfiles"
+
 ### Complement ###
 autoload -U compinit; compinit # 補完機能を有効にする
 setopt auto_list               # 補完候補を一覧で表示する(d)
