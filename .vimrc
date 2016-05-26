@@ -1,90 +1,42 @@
-"Neobundle
-if has('vim_starting')
-  if &compatible
-    set nocompatible
-    " neobundle をインストールしていない場合は自動インストール
-    if !isdirectory(expand("~/.vim/bundle/neobundle.vim/"))
-      echo "install neobundle..."
-      :call system("git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim")
-    endif
-  endif
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+"dein.vim dark power
+let s:dein_dir = expand('~/dotfiles/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
-call neobundle#begin(expand('~/.vim/bundle'))
+set nocompatible
+" dein.vim をインストールしていない場合は自動インストール
+if !isdirectory(s:dein_repo_dir)
+  echo "install dein.vim..."
+  execute '!git clone git://github.com/Shougo/dein.vim' s:dein_repo_dir
+endif
+execute 'set runtimepath^=' . s:dein_repo_dir
 
 "---------------------------
-" Start Neobundle Settings.
+" Start dein.vim Settings.
 "---------------------------
 
-"neobundle自体の取得
-NeoBundleFetch 'Shougo/neobundle.vim'
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
 
-"コード補完
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'marcus/rsense'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
+  let g:rc_dir    = expand('~/dotfiles/dein')
+  let s:toml      = g:rc_dir . '/dein.toml'
+  let s:lazy_toml = g:rc_dir . '/dein_lazy.toml'
 
-"ファイル構造可視化
-NeoBundle 'scrooloose/nerdtree'
+  " TOMLファイルにpluginを記述
+  call dein#load_toml(s:toml,      {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
-"ブロック終わりの補完
-NeoBundle 'Townk/vim-autoclose'
-
-"静的解析
-NeoBundle 'scrooloose/syntastic.git'
-
-"ドキュメント参照
-NeoBundle 'thinca/vim-ref'
-NeoBundle 'yuku-t/vim-ref-ri'
-
-"メソッド定義元へのジャンプ
-NeoBundle 'szw/vim-tags'
-
-"ステータスライン追加
-NeoBundle 'itchyny/lightline.vim'
-
-"Markdownプレビュー表示
-NeoBundle 'kannokanno/previm'
-au BufRead,BufNewFile *.md set filetype=markdown
-let g:previm_open_cmd = 'open -a Google\ Chrome'
-let g:previm_enable_realtime = 1
-
-"ブラウザを開く
-NeoBundle 'open-browser.vim' 
-
-"自動で閉じる
-NeoBundle 'tpope/vim-endwise'
-
-"Git
-NeoBundle 'tpope/vim-fugitive'
-
-call neobundle#end()
-
-NeoBundleCheck
-
-"------------------------
-" End NeoBundle Settings.
-"------------------------
-
-" -------------------------------
-" Rsense
-" -------------------------------
-let g:rsenseHome = '/usr/local/lib/rsense-0.3'
-let g:rsenseUseOmniFunc = 1
-
-" --------------------------------
-" neocomplete.vim
-" --------------------------------
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-if !exists('g:neocomplete#force_omni_input_patterns')
-  let g:neocomplete#force_omni_input_patterns = {}
+  call dein#end()
+  ca;; dein#save_state()
 endif
-let g:neocomplete#force_omni_input_patterns.ruby ='[^.*\t]\.\w*\|\h\w*::'
 
-" Required:
+" 未インストールを確認
+if dein#check_install()
+  call dein#install()
+endif
+
+
+" 以下細かな設定
+
 filetype plugin indent on
 
 runtime! debian.vim
