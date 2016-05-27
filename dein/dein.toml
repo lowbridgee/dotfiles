@@ -5,8 +5,22 @@ repo = 'Shougo/dein.vim'
 repo = 'scrooloose/syntastic.git'
 
 [[plugins]]
-repo = 'kannokanno/previm'
-
-[[plugins]]
 repo = 'itchyny/lightline.vim'
 
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+# markdownプレビュー
+[[plugins]]
+repo = 'kannokanno/previm'
+on_if = '''
+  *.md set filetype=markdown
+  let g:previm_open_cmd = 'open -a Google\ Chrome'
+  let g:previm_enable_realtime = 1
+'''
+
+[[plugins]]
+repo = 'open-browser.vim'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
