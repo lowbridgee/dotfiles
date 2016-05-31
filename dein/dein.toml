@@ -12,6 +12,13 @@ repo = 'Townk/vim-autoclose'
 
 # markdownプレビュー
 [[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+depends = ['tabular']
+
+[[plugins]]
 repo = 'kannokanno/previm'
 on_if = '''
   *.md set filetype=markdown

@@ -77,13 +77,10 @@
       needReload = true;
     }
     if (needReload && (typeof getContent === 'function') && (typeof getFileType === 'function')) {
-      var beforePageYOffset = _win.pageYOffset;
       _doc.getElementById('preview').innerHTML = transform(getFileType(), getContent());
-
-      mermaid.init();
-      Array.prototype.forEach.call(_doc.querySelectorAll('pre code'), hljs.highlightBlock);
-      autoScroll('body', beforePageYOffset);
-      style_header();
+      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ["\\(","\\)"]] } }); // added1
+      MathJax.Hub.Queue(["Typeset",MathJax.Hub]);  //added2
+      autoScroll('body'); 
     }
   }
 
