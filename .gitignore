@@ -1,3 +1,7 @@
 # ignore files
 .vimrc.neobundle
 .vim
+dein/merged/
+dein/repos/
+dein/rollbacks/
+dein/temp/
