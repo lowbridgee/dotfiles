@@ -65,6 +65,10 @@ set laststatus=2
 autocmd ColorScheme * highlight LineNr ctermfg=228 guifg=#008800
 colorscheme hybrid
 
+" filetype 
+au BufNewFile,BufRead *.scala setf scala
+au BufNewFile,BufRead *.md setf markdown
+
 "Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
