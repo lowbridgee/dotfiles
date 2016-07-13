@@ -151,5 +151,8 @@ eval "$(rbenv init -)"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# direnv
+eval "$(direnv hook zsh)"
+
 #rabbit
 export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
