@@ -142,3 +142,14 @@ RPROMPT=$'$(vcs_info_wrapper)'
 # alias
 alias ll='ls -l'
 alias tsubame='ssh 16M30622@login-t2.g.gsic.titech.ac.jp'
+
+#rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init -)"
+
+# golang
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
+#rabbit
+export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
