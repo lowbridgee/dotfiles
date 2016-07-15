@@ -1,4 +1,3 @@
-"dein.vim dark power
 let s:dein_dir = expand('~/dotfiles/dein')
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
 
@@ -67,7 +66,12 @@ colorscheme hybrid
 
 " filetype 
 au BufNewFile,BufRead *.scala setf scala
+au BufNewFile,BufRead *.go    setlocal tabstop=4 softtabstop=4 shiftwidth=4
 au BufNewFile,BufRead *.md setf markdown
+
+" vim-go
+let g:go_fmt_command = "goimports"
+let g:go_fmt_autosave = 1
 
 "Source a global configuration file if available
 if filereadable("/etc/vim/vimrc.local")

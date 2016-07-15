@@ -1,1 +1,1 @@
-['dein.vim', 'lightline.vim', 'open-browser.vim', 'previm', 'syntastic', 'tabular', 'vim-autoclose', 'vim-fugitive', 'vim-markdown', 'vim-scala']
+['dein.vim', 'lightline.vim', 'open-browser.vim', 'previm', 'syntastic', 'tabular', 'vim-autoclose', 'vim-fugitive', 'vim-go', 'vim-markdown', 'vim-scala']
