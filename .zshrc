@@ -148,7 +148,18 @@ export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 # direnv
+export GOPATH=$HOME/go
 eval "$(direnv hook zsh)"
 
 #rabbit
 export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
+
+# jupyter
+alias note='jupyter notebook'
+
+####################
+#自作つーる
+####################
+
+#createx
+export PATH=$HOME/Documents/go/createx/bin:$PATH
