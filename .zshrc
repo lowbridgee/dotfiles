@@ -143,6 +143,9 @@ RPROMPT=$'$(vcs_info_wrapper)'
 alias ll='ls -l'
 alias tsubame='ssh 16M30622@login-t2.g.gsic.titech.ac.jp'
 
+# pyenv
+export PATH="$HOME/.pyenv/shims:$PATH"
+
 #rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
