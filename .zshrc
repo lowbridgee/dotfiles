@@ -10,6 +10,8 @@ export AUTOFEATURE=true  # autotestでfeatureを動かす
 
 bindkey -v              # キーバインドをviモードに設定
 
+export PATH="/usr/local/bin/:/usr/bin:$PATH"
+
 setopt auto_pushd        # cd時にディレクトリスタックにpushdする
 #setopt correct           # コマンドのスペルを訂正する
 setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う
