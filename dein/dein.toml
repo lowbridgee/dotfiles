@@ -4,6 +4,12 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'scrooloose/syntastic.git'
 
+[[plugins]] # カラースキーマ
+repo = 'w0ng/vim-hybrid'
+hook_add = '''
+  set background=dark
+'''
+
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
