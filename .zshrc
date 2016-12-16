@@ -149,8 +149,9 @@ alias tsubame='ssh 16M30622@login-t2.g.gsic.titech.ac.jp'
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
-# direnv
+# go
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
 eval "$(direnv hook zsh)"
 
 #rabbit
