@@ -77,3 +77,16 @@ let g:go_fmt_autosave = 1
 if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
+
+" rust
+let g:rustfmt_autosave = 1
+let g:rustfmt_command = $HOME . '/.cargo/bin/rustfmt'
+set hidden
+let g:racer_cmd = $HOME . '/.cargo/bin/racer'
+let $RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
+let g:racer_experimental_completer = 1
+
+au FileType rust nmap gd <Plug>(rust-def)
+au FileType rust nmap gs <Plug>(rust-def-split)
+au FileType rust nmap gx <Plug>(rust-def-vertical)
+au FileType rust nmap <leader>gd <Plug>(rust-doc)
