@@ -78,6 +78,9 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+" Key mapping
+let mapleader = "\<Space>"
+
 " rust
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = $HOME . '/.cargo/bin/rustfmt'
