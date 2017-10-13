@@ -33,9 +33,6 @@ on_if = '''
 '''
 
 [[plugins]]
-repo = 'open-browser.vim'
-
-[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
@@ -43,3 +40,6 @@ repo = 'derekwyatt/vim-scala'
 
 [[plugins]]
 repo = 'fatih/vim-go'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
