@@ -81,7 +81,6 @@ endif
 " rust
 let g:rustfmt_autosave = 1
 let g:rustfmt_command = $HOME . '/.cargo/bin/rustfmt'
-set hidden
 let g:racer_cmd = $HOME . '/.cargo/bin/racer'
 let $RUST_SRC_PATH="$HOME/.multirust/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 let g:racer_experimental_completer = 1

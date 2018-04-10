@@ -160,6 +160,9 @@ export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
 # jupyter
 alias note='jupyter notebook'
 
+# rust
+export RUST_SRC_PATH=/Users/Lowbridge/rust/rust-package/rustc-1.24.1-src/src
+
 ####################
 #自作つーる
 ####################
