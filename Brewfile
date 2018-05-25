@@ -27,6 +27,7 @@ brew "lua"
 brew "phantomjs"
 brew "rbenv"
 brew "direnv"
+brew "redis"
  
 cask "iterm2"
 cask "vagrant"
