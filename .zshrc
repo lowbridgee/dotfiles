@@ -113,6 +113,7 @@ precmd() {
 ### Aliases ###
 #時刻を表示させる
 alias history='history -E'
+alias clean_branch='git branch --merged|grep -v -E "\*|master"|xargs -n1 -I{} git branch -d {}'
 
 # cdコマンド実行後、lsを実行する
 function cd() {
