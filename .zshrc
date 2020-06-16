@@ -13,10 +13,8 @@ bindkey -v              # キーバインドをviモードに設定
 export PATH="/usr/local/bin/:/usr/bin:$PATH"
 
 setopt auto_pushd        # cd時にディレクトリスタックにpushdする
-#setopt correct           # コマンドのスペルを訂正する
 setopt prompt_subst      # プロンプト定義内で変数置換やコマンド置換を扱う
 setopt notify            # バックグラウンドジョブの状態変化を即時報告する
-#setopt equals            # =commandを`which command`と同じ処理にする
 
 export XDG_CONFIG_HOME="$HOME/dotfiles"
 
@@ -142,10 +140,6 @@ vcs_info_wrapper() {
 }
 RPROMPT=$'$(vcs_info_wrapper)'
 
-# alias
-alias ll='ls -l'
-alias tsubame='ssh 16M30622@login-t2.g.gsic.titech.ac.jp'
-
 #rbenv
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
@@ -155,18 +149,3 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 eval "$(direnv hook zsh)"
 
-#rabbit
-export DYLD_LIBRARY_PATH=/usr/local/opt/cairo/lib
-
-# jupyter
-alias note='jupyter notebook'
-
-# rust
-export RUST_SRC_PATH=/Users/Lowbridge/rust/rust-package/rustc-1.24.1-src/src
-
-####################
-#自作つーる
-####################
-
-#createx
-export PATH=$HOME/Documents/go/createx/bin:$PATH
