@@ -139,3 +139,7 @@ vcs_info_wrapper() {
         fi
 }
 RPROMPT=$'$(vcs_info_wrapper)'
+
+# ghq + fzf
+export PATH=$PATH:/usr/local/go/bin
+alias cr='cd $(ghq list -p | fzf --reverse)'
