@@ -143,3 +143,28 @@ RPROMPT=$'$(vcs_info_wrapper)'
 # ghq + fzf
 export PATH=$PATH:/usr/local/go/bin
 alias cr='cd $(ghq list -p | fzf --reverse)'
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/Downloads/google-cloud-sdk/path.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/path.zsh.inc"; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/Downloads/google-cloud-sdk/completion.zsh.inc"; fi
+
+export PATH="${HOME}/workspace/vision/dbt/.poetry/bin:$PATH"
+export POETRY_VIRTUALENVS_IN_PROJECT=true
+export PATH="${HOME}/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
+export PATH="/opt/homebrew/opt/php@7.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.4/sbin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.3/bin:$PATH"
+export PATH="/opt/homebrew/opt/php@7.3/sbin:$PATH"
+export PATH="${HOME}/Library/Python/3.10/bin:$PATH"
+
+# added by Snowflake SnowSQL installer v1.2
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+
+# sdkman
+export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
