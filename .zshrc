@@ -168,3 +168,10 @@ export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
 # sdkman
 export SDKMAN_DIR=$(brew --prefix sdkman-cli)/libexec
 [[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
+
+function fzf-history() {
+  BUFFER=$(history -n 1 | fzf --exact --no-sort +m --tac -n2..,.. --tiebreak=index --bind=ctrl-r:toggle-sort --query "$LBUFFER")
+  CURSOR=$#BUFFER
+}
+zle -N fzf-history
+bindkey '^r' fzf-history
