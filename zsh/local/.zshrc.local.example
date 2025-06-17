@@ -1,0 +1,11 @@
+# Local ZSH Configuration Example
+# Copy this file to .zshrc.local and customize for machine-specific settings
+
+# Example: Local aliases
+# alias myproject='cd ~/projects/myproject'
+
+# Example: Local environment variables
+# export LOCAL_API_KEY="your-key-here"
+
+# Example: Local PATH additions
+# safe_path_add "/opt/local/bin"
