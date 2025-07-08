@@ -1,0 +1,18 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
+  "lightline.vim": { "branch": "master", "commit": "e358557e1a9f9fc860416c8eb2e34c0404078155" },
+  "neomru.vim": { "branch": "master", "commit": "d9b92f73f7d9158e803d72f2baeb7da9ea30040e" },
+  "previm": { "branch": "master", "commit": "0918a3a7263a840bf9038e2d599a965d320a6b49" },
+  "rust-doc.vim": { "branch": "master", "commit": "fecc20ff24a34cbc6599fb89c0cb79e92e0c581b" },
+  "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
+  "syntastic": { "branch": "master", "commit": "8d5e37c29cf5952fbf300b9230bffe424c61a488" },
+  "tabular": { "branch": "master", "commit": "12437cd1b53488e24936ec4b091c9324cafee311" },
+  "unite.vim": { "branch": "master", "commit": "0ccb3f7988d61a9a86525374be97360bd20db6bc" },
+  "vim-autoclose": { "branch": "master", "commit": "a9a3b7384657bc1f60a963fd6c08c63fc48d61c3" },
+  "vim-fugitive": { "branch": "master", "commit": "593f831d6f6d779cbabb70a4d1e6b1b1936a88af" },
+  "vim-go": { "branch": "master", "commit": "e6788d124a564b049f3d80bef984e8bd5281286d" },
+  "vim-hybrid": { "branch": "master", "commit": "cc58baabeabc7b83768e25b852bf89c34756bf90" },
+  "vim-markdown": { "branch": "master", "commit": "8f6cb3a6ca4e3b6bcda0730145a0b700f3481b51" },
+  "vim-racer": { "branch": "master", "commit": "d1aead98a936cd8165b3329511d7c987226eb3a6" },
+  "vim-scala": { "branch": "master", "commit": "7657218f14837395a4e6759f15289bad6febd1b4" }
+}

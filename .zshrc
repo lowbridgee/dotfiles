@@ -42,3 +42,6 @@ done
 # Load local configuration if exists
 local_config="${ZSH_CONFIG_DIR}/local/.zshrc.local"
 [[ -r "$local_config" ]] && source "$local_config"
+export NVM_DIR="$HOME/dotfiles/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
